@@ -1,0 +1,15 @@
+[project]
+name = "blog-agent-ai"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "crewai>=0.102.0",
+    "crewai-tools>=0.36.0",
+    "gradio>=5.1.0",
+    "open-interpreter>=0.4.3",
+    "psycopg2>=2.9.10",
+    "python-dotenv>=1.0.1",
+    "streamlit>=1.43.0",
+]
