@@ -55,7 +55,7 @@ Execute os seguintes comandos para rodar diferentes componentes do projeto:
 - Para rodar Interpretador:
 
   ```sh
-  uv run python ./query/main.py
+  uv run python ./interpretador/main.py
   ```
 
 ## Estrutura do Projeto
