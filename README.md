@@ -1,10 +1,10 @@
 # CrewAI Code Interpreter
 
-Este repositório contém um interpretador de código baseado no CrewAI, permitindo execução interativa de comandos de IA.
+Este repositório contém os códigos que foram referenciados no blog.
 
 ## Requisitos
 
-Antes de começar, certifique-se de ter o **Python 3.10+** instalado.
+Antes de começar, certifique-se de ter o **Python 3.12+** instalado.
 Utilizamos o `uv` para gerenciamento de dependências. Se ainda não tiver o `uv` instalado, você pode instalá-lo com:
 
 ```sh
@@ -30,45 +30,43 @@ pip install uv
    uv add crewai
    uv add python-dotenv
    uv add crewai_tools
-   #uv add langchain-community
    uv add open-interpreter
    uv add gradio
    uv add psycopg2
    uv add streamlit
-   #uv add langchain
    ```
 
 ## Execução
 
 Execute os seguintes comandos para rodar diferentes componentes do projeto:
 
-- Para rodar o interpretador principal:
+- Para rodar o Redigir Blog:
 
   ```sh
-  uv run python main.py
+  uv run python ./blogs/main.py
   ```
 
-- Para iniciar a interface do usuário (UI):
+- Para rodar o SQL Query AI:
 
   ```sh
-  uv run python main_ui.py
+  uv run python ./query/main.py
   ```
 
-- Para iniciar a UI integrada ao Ollama:
+- Para rodar Interpretador:
+
   ```sh
-  uv run python main_ui_ollama.py
+  uv run python ./query/main.py
   ```
 
 ## Estrutura do Projeto
 
 ```
 /
-├── main.py              # Script principal do interpretador
-├── main_ui.py           # Interface UI principal
-├── main_ui_ollama.py    # Interface UI integrada ao Ollama
-├── .env                 # Variáveis de ambiente (exemplo: chaves de API)
-├── requirements.txt     # Dependências (caso prefira usar pip)
-├── README.md            # Documentação do projeto
+├── blogs                # Códigos do Agentes para redigir blogs
+├── query                # Cógigos do Agente que utiliza linguagem natural para realizar consultas em uma base de dados
+├── interpretador        # Códigos do Agente interpretador de código
+├── llm_model.py         # Classe que encapsula os modelos LLM e SLM
+├── llm_type.py          # Enum
 ```
 
 ## Contribuição
